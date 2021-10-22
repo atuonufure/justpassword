@@ -70,4 +70,15 @@
   border: #0070f3;
   border-radius: 0.5rem;
   background-color: #0071f315;
+  display: flex;
+  align-content: center;
+  padding: 5px;
+}
+
+.passwordtext {
+  margin: 0px 5px;
+}
+
+.copy {
+  margin: 2px;
 }
