@@ -24,6 +24,8 @@ export default function Home() {
     return passArr.join("");
   };
 
+  const copyPassword = () => { navigator.clipboard.writeText(password); }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -37,8 +39,11 @@ export default function Home() {
 
         <p className={styles.description}>Create a strong password</p>
 
-        <p className={styles.password}>{password}</p>
-
+        <p className={styles.password}>
+          <span className={styles.passwordtext}>{password}</span>  
+          {password !== 'Press button below' ? <Button className={styles.copy} onClick={copyPassword}>Copy</Button> : null} 
+        </p>
+       
         <Button variant="contained" onClick={() => setPassword(calcPassword())}>
           Generate
         </Button>
